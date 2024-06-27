@@ -1,5 +1,5 @@
 # Makue
-mah-koo-ay
+Phonetically: **Mah-*koo*-ay**
 
 ## Description
 
