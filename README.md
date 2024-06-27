@@ -1,4 +1,5 @@
-# my-css-framework
+# Makue
+mah-koo-ay
 
 ## Description
 
@@ -20,12 +21,12 @@ Because truly, I don't have a better name yet.
 1. Clone the repository:
 
   ```bash
-   git clone https://github.com/your-username/your-repository-name.git
+   git clone https://github.com/mtwlz/makue.git
   ```
 
 2. Navigate to the directory
   ```bash
-    cd my_directory/
+    cd /path/to/makue/
   ```
 
 3. Install the dependencies
