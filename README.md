@@ -1,3 +1,5 @@
+![image](src\assets\makue192.png)
+
 # Makue
 Phonetically: **Mah-*koo*-ay**
 
