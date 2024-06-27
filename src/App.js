@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import './styles/global.css';
 import { ThemeContext, useTheme } from './contexts/ThemeContext';
