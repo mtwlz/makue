@@ -1,0 +1,150 @@
+/* src/styles/button.css */
+@import './themes.css';
+
+.button {
+  background-color: gray;
+  color: var(--text-dark);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: inset 0 -3px 0 dimgray;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button.dark {
+  background-color: rgb(62, 62, 62);
+  color: white;
+  box-shadow: inset 0 -3px 0 rgb(55, 55, 55);
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
+.button:hover {
+  filter: brightness(1.25);
+}
+
+.button.bordered {
+  background: none !important;
+  box-shadow: none !important;
+  font-weight: 700;
+  border: 2px solid gray;
+  color: gray;
+}
+
+.button.primary {
+  background-color: var(--primary);
+  box-shadow: inset 0 -3px 0 var(--primary-offset);
+}
+
+.button.primary.dark {
+  background-color: var(--primary-dark);
+  box-shadow: inset 0 -3px 0 var(--primary-dark-offset);
+}
+
+.button.bordered.primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.button.secondary {
+  background-color: var(--secondary);
+  box-shadow: inset 0 -3px 0 var(--secondary-offset);
+}
+
+.button.secondary.dark {
+  background-color: var(--secondary-dark);
+  box-shadow: inset 0 -3px 0 var(--secondary-dark-offset);
+}
+
+.button.bordered.secondary {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.button.success {
+  background-color: var(--success);
+  box-shadow: inset 0 -3px 0 var(--success-offset);
+}
+
+.button.success.dark {
+  background-color: var(--success-dark);
+  box-shadow: inset 0 -3px 0 var(--success-dark-offset);
+}
+
+.button.bordered.success {
+  color: var(--success);
+  border-color: var(--success);
+}
+
+.button.danger {
+  background-color: var(--danger);
+  box-shadow: inset 0 -3px 0 var(--danger-offset);
+}
+
+.button.danger.dark {
+  background-color: var(--danger-dark);
+  box-shadow: inset 0 -3px 0 var(--danger-dark-offset);
+}
+
+.button.bordered.danger {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.button.caution {
+  background-color: var(--caution);
+  color: var(--text);
+  box-shadow: inset 0 -3px 0 var(--caution-offset);
+}
+
+.button.caution.dark {
+  background-color: var(--caution-dark);
+  box-shadow: inset 0 -3px 0 var(--caution-dark-offset);
+}
+
+.button.bordered.caution {
+  color: var(--caution);
+  border-color: var(--caution);
+}
+
+.button.info {
+  background-color: var(--info);
+  box-shadow: inset 0 -3px 0 var(--info-offset);
+}
+
+.button.info.dark {
+  background-color: var(--info-dark);
+  box-shadow: inset 0 -3px 0 var(--info-dark-offset);
+}
+
+.button.bordered.info {
+  color: var(--info);
+  border-color: var(--info);
+}
+
+.button.important {
+  background-color: var(--important);
+  box-shadow: inset 0 -3px 0 var(--important-offset);
+}
+
+.button.important.dark {
+  background-color: var(--important-dark);
+  box-shadow: inset 0 -3px 0 var(--important-dark-offset);
+}
+
+.button.bordered.important {
+  color: var(--important);
+  border-color: var(--important);
+}
+
+.button.disabled {
+  filter: grayscale(0.5);
+  cursor: not-allowed;
+  pointer-events: none;
+}

@@ -1,0 +1,160 @@
+/* src/styles/toggle.css */
+@import './themes.css';
+@import './animations.css';
+
+.toggle {
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    width: 60px;
+    height: 25px;
+    overflow: hidden;
+    border-radius: 50px;
+    transition: opacity 0.5s;
+}
+
+.toggle.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.toggle .bg {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 25px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: left;
+    transition: filter 0.5s, background-color 0.2s, transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.toggle:hover .bg.active {
+    filter: brightness(1.25);
+}
+
+.toggle .bg span {
+    font-size: 11px;
+    font-weight: 500;
+    user-select: none;
+}
+
+.toggle .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 25px;
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.toggle .bg.inactive {
+    background-color: #ccc;
+}
+
+.toggle.dark .bg.inactive {
+    background-color: #686868;
+}
+
+.toggle .bg.inactive span {
+    margin-left: 28px;
+    transition: color 0.5s;
+}
+
+.toggle.on .bg.inactive {
+    transform: translateX(35px);
+}
+
+.toggle .bg.active {
+    background-color: var(--primary);
+    color: var(--text-dark);
+    transform: translateX(-35px);
+    z-index: 1;
+}
+
+.toggle.secondary .bg.active {
+    background-color: var(--secondary);
+}
+
+.toggle.danger .bg.active {
+    background-color: var(--danger);
+}
+
+.toggle.caution .bg.active {
+    background-color: var(--caution);
+    color: var(--text);
+}
+
+.toggle.success .bg.active {
+    background-color: var(--success);
+}
+
+.toggle.info .bg.active {
+    background-color: var(--info);
+}
+
+.toggle.important .bg.active {
+    background-color: var(--important);
+}
+
+.toggle.dark .bg.active {
+    background-color: var(--primary-dark);
+}
+
+.toggle.dark.primary .bg.active {
+    background-color: var(--primary-dark);
+}
+
+.toggle.dark.secondary .bg.active {
+    background-color: var(--secondary-dark);
+}
+
+.toggle.dark.danger .bg.active {
+    background-color: var(--danger-dark);
+}
+
+.toggle.dark.caution .bg.active {
+    background-color: var(--caution-dark);
+}
+
+.toggle.dark.success .bg.active {
+    background-color: var(--success-dark);
+}
+
+.toggle.dark.info .bg.active {
+    background-color: var(--info-dark);
+}
+
+.toggle.dark.important .bg.active {
+    background-color: var(--important-dark);
+}
+
+.toggle .bg.active span {
+    margin-left: 10px;
+}
+
+.toggle.on .bg.active {
+    transform: translateX(0px);
+}
+
+.toggle .ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+    z-index: 3;
+}
+
+.toggle.on .ball {
+    transform: translateX(35px);
+}

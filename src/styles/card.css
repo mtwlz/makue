@@ -1,0 +1,16 @@
+/* src/styles/card.css */
+@import './themes.css';
+
+.card {
+  background: var(--object-background);
+  color: var(--text);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.card.dark {
+  background: var(--object-background-dark);
+  color: var(--text-dark);
+}

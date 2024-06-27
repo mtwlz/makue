@@ -1,0 +1,190 @@
+/* src/styles/toast.css */
+@import './themes.css';
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 200px;
+    max-width: 30%;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.toast {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    width: fit-content;
+    color: var(--text-dark);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    cursor: pointer;
+    opacity: 0;
+    display: flex;
+    transform: translateY(-10px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.toast .icon {
+    font-size: 24px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toast .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.toast .children {
+    display: block;
+    margin-top: 5px;
+}
+
+.toast.showing {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast:hover {
+    transform: scale(1.05);
+}
+
+.toast .progress-container {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: var(--primary-offset);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.toast .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--primary);
+    filter: brightness(1.25);
+    transition: width 0.1s linear, background-color 1s ease;
+}
+
+.toast.secondary .progress-bar {
+    background-color: var(--secondary);
+}
+
+.toast.success .progress-bar {
+    background-color: var(--success);
+}
+
+.toast.danger .progress-bar {
+    background-color: var(--danger);
+}
+
+.toast.caution .progress-bar {
+    background-color: var(--caution);
+}
+
+.toast.info .progress-bar {
+    background-color: var(--info);
+}
+
+.toast.important .progress-bar {
+    background-color: var(--important);
+}
+
+.toast.secondary .progress-container {
+    background-color: var(--secondary-offset);
+}
+
+.toast.success .progress-container {
+    background-color: var(--success-offset);
+}
+
+.toast.danger .progress-container {
+    background-color: var(--danger-offset);
+}
+
+.toast.caution .progress-container {
+    background-color: var(--caution-offset);
+}
+
+.toast.info .progress-container {
+    background-color: var(--info-offset);
+}
+
+.toast.important .progress-container {
+    background-color: var(--important-offset);
+}
+
+.toast.primary {
+    background-color: var(--primary);
+}
+
+.toast.primary.dark {
+    background-color: var(--primary-dark);
+}
+
+.toast.secondary {
+    background-color: var(--secondary);
+}
+
+.toast.secondary.dark {
+    background-color: var(--secondary-dark);
+}
+
+.toast.success {
+    background-color: var(--success);
+}
+
+.toast.success.dark {
+    background-color: var(--success-dark);
+}
+
+.toast.danger {
+    background-color: var(--danger);
+}
+
+.toast.danger.dark {
+    background-color: var(--danger-dark);
+}
+
+.toast.caution {
+    color: var(--text);
+    background-color: var(--caution);
+}
+
+.toast.caution.dark {
+    background-color: var(--caution-dark);
+}
+
+.toast.info {
+    background-color: var(--info);
+}
+
+.toast.info.dark {
+    background-color: var(--info-dark);
+}
+
+.toast.important {
+    background-color: var(--important);
+}
+
+.toast.important.dark {
+    background-color: var(--important-dark);
+}
+
+.toast .title {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
