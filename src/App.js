@@ -13,6 +13,7 @@ import { useModalContext } from './contexts/ModalContext';
 import { useToastContext } from './contexts/ToastContext';
 import ToastContainer from './components/ToastContainer';
 import Icon from './components/Icon';
+import Checkbox from './components/Checkbox';
 
 const messages = [
   {
@@ -122,6 +123,8 @@ function App() {
   // Button test function
   const [buttonState, setButtonState] = useState('None');
   const buttonClick = (context) => setButtonState(context);
+
+  // Checkbox test function
 
   return (
     <div className={`app ${darkMode ? 'dark' : ''}`}>
@@ -241,6 +244,44 @@ function App() {
               onToggle={() => console.log('Important toggled!')}
             />
           </div>
+        </Card>
+        <Card>
+          <h2>Checkboxes</h2>
+          <Checkbox
+            label="Primary"
+            context="primary"
+          />
+          <br />
+          <Checkbox
+            label="Secondary"
+            context="secondary"
+          />
+          <br />
+          <Checkbox
+            label="Success"
+            context="success"
+          />
+          <br />
+          <Checkbox
+            label="Danger (disabled example)"
+            context="danger"
+            disabled
+          />
+          <br />
+          <Checkbox
+            label="Caution"
+            context="caution"
+          />
+          <br />
+          <Checkbox
+            label="Info"
+            context="info"
+          />
+          <br />
+          <Checkbox
+            label="Important"
+            context="important"
+          />
         </Card>
         <br /><br />
         <Modal />

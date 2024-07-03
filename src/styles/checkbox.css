@@ -1,0 +1,192 @@
+@import './themes.css';
+
+/* The container */
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+  color: var(--text);
+  transition: filter 0.3s;
+}
+
+/* Hover, lighten */
+.checkbox-container:hover {
+  filter: brightness(1.25);
+}
+
+/* Disabled */
+.checkbox-container.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Hide the default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* The fake box */
+.checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: var(--object-background);
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  overflow: hidden; /* Hide overflow */
+  transition: background-color 0.5s, border-color 0.3s;
+}
+
+/* The fake check */
+.checkmark {
+  content: "";
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 0;
+  height: 0;
+  border: solid var(--primary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show the checkmark when checked */
+.checkbox.checked .checkmark {
+  animation: draw 0.3s forwards;
+  opacity: 1;
+}
+
+/* Drawing animation */
+@keyframes draw {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    width: 3px;
+    height: 0;
+  }
+  100% {
+    width: 5px;
+    height: 9px;
+  }
+}
+
+/* Context variants */
+.checkbox-container.primary .checkbox,
+.checkbox-container.primary .checkbox.checked .checkmark {
+  border-color: var(--primary);
+}
+
+.checkbox-container.primary .checkbox.checked {
+  background-color: var(--primary-transparent);
+}
+
+.checkbox-container.secondary .checkbox,
+.checkbox-container.secondary .checkbox.checked .checkmark {
+  border-color: var(--secondary);
+}
+
+.checkbox-container.secondary .checkbox.checked {
+  background-color: var(--secondary-transparent);
+}
+
+.checkbox-container.success .checkbox,
+.checkbox-container.success .checkbox.checked .checkmark {
+  border-color: var(--success);
+}
+
+.checkbox-container.success .checkbox.checked {
+  background-color: var(--success-transparent);
+}
+
+.checkbox-container.danger .checkbox,
+.checkbox-container.danger .checkbox.checked .checkmark {
+  border-color: var(--danger);
+}
+
+.checkbox-container.danger .checkbox.checked {
+  background-color: var(--danger-transparent);
+}
+
+.checkbox-container.caution .checkbox,
+.checkbox-container.caution .checkbox.checked .checkmark {
+  border-color: var(--caution-dark);
+}
+
+.checkbox-container.caution .checkbox.checked {
+  background-color: var(--caution-transparent);
+}
+
+.checkbox-container.info .checkbox,
+.checkbox-container.info .checkbox.checked .checkmark {
+  border-color: var(--info);
+}
+
+.checkbox-container.info .checkbox.checked {
+  background-color: var(--info-transparent);
+}
+
+.checkbox-container.important .checkbox,
+.checkbox-container.important .checkbox.checked .checkmark {
+  border-color: var(--important);
+}
+
+.checkbox-container.important .checkbox.checked {
+  background-color: var(--important-transparent);
+}
+
+/* Dark variants */
+.checkbox-container.dark .checkbox {
+  background-color: var(--object-background-dark);
+}
+
+.checkbox-container.dark.primary .checkbox {
+  background-color: var(--primary-dark-offset);
+}
+
+.checkbox-container.dark.secondary .checkbox {
+  background-color: var(--secondary-dark-offset);
+}
+
+.checkbox-container.dark.success .checkbox {
+  background-color: var(--success-dark-offset);
+}
+
+.checkbox-container.dark.danger .checkbox {
+  background-color: var(--danger-dark-offset);
+}
+
+.checkbox-container.dark.caution .checkbox {
+  background-color: var(--caution-dark-offset);
+  border-color: var(--caution);
+}
+
+.checkbox-container.dark.info .checkbox {
+  background-color: var(--info-dark-offset);
+}
+
+.checkbox-container.dark.important .checkbox {
+  background-color: var(--important-dark-offset);
+}
+
+.checkbox-container.dark .checkbox.checked .checkmark {
+  border-color: var(--text-dark);
+}
+
+.checkbox-container.dark {
+  color: var(--text-dark);
+}
