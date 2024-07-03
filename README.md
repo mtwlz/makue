@@ -5,7 +5,7 @@ Phonetically: **Mah-*koo*-ay**
 
 ## Description
 
-Because truly, I don't have a better name yet.
+A CSS framework for React projects.
 
 ## Features
 
