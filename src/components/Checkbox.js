@@ -33,6 +33,7 @@ Checkbox.propTypes = {
   onChange: PropTypes.func.isRequired,
   label: PropTypes.string,
   context: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'caution', 'info', 'important']),
+  disabled: PropTypes.bool,
 };
 
 export default Checkbox;

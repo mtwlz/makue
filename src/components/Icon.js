@@ -1,6 +1,7 @@
 // Make an Icon component that takes a context prop and renders a icon from FontAwesome.
 import React, { useEffect } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
+import '../styles/icon.css';
 import PropTypes from 'prop-types';
 
 const Icon = (props) => {
@@ -13,7 +14,7 @@ const Icon = (props) => {
         let newClasses = ['fa'];
 
         // Does classes contain the icon?
-        newClasses.push(`fa-${icon}`);
+        newClasses.push(`fa-${icon} icon`);
 
         // The basic animations
         if (spin) newClasses.push('fa-spin');
@@ -22,6 +23,8 @@ const Icon = (props) => {
         if (bounce) newClasses.push('fa-bounce');
         if (flip) newClasses.push('fa-flip');
         if (shake) newClasses.push('fa-shake');
+        if (darkMode) newClasses.push('dark');
+        if (context) newClasses.push(context);
 
         // Anything else really, allows for animation utilities.
         if (custom) newClasses.push(custom);
@@ -33,10 +36,7 @@ const Icon = (props) => {
     return (
         <i 
             className={classes.join(' ')}
-            aria-label={`${icon} icon`} 
-            style={{
-                color: context ? `var(--${context})` : `var(--text${darkMode ? '-dark' : ''})`,
-            }}
+            aria-label={`${icon} ${context ? context : ''} ${darkMode ? 'dark' : ''} icon`}
         />
     );
 };

@@ -14,6 +14,7 @@ import { useToastContext } from './contexts/ToastContext';
 import ToastContainer from './components/ToastContainer';
 import Icon from './components/Icon';
 import Checkbox from './components/Checkbox';
+import TextInput from './components/TextInput';
 
 const messages = [
   {
@@ -124,7 +125,12 @@ function App() {
   const [buttonState, setButtonState] = useState('None');
   const buttonClick = (context) => setButtonState(context);
 
-  // Checkbox test function
+  // Text input test function
+  const [textInputValue1, setTextInputValue1] = useState('');
+  const [textInputValue2, setTextInputValue2] = useState('');
+  const [textInputValue3, setTextInputValue3] = useState('');
+  const [textInputValue4, setTextInputValue4] = useState('');
+  const [textInputValue5, setTextInputValue5] = useState('');
 
   return (
     <div className={`app ${darkMode ? 'dark' : ''}`}>
@@ -282,6 +288,42 @@ function App() {
             label="Important"
             context="important"
           />
+        </Card>
+        <Card>
+          <h2>Inputs</h2>
+          <Card>
+            <h3>Text Inputs</h3>
+            <TextInput
+              value={textInputValue1}
+              onChange={setTextInputValue1}
+              placeholder="A regular text input."
+              context="primary"
+            />
+            <TextInput
+              value={textInputValue2}
+              onChange={setTextInputValue2}
+              placeholder="A text input with a label."
+              context="primary"
+              label="This is what the label looks like."
+            />
+            <TextInput
+              value={textInputValue3}
+              onChange={setTextInputValue3}
+              placeholder="This one has an icon."
+              
+              icon="question-circle"
+            />
+            <TextInput
+              value={textInputValue4}
+              onChange={setTextInputValue4}
+              placeholder="This one validates text."
+              context="primary"
+              label="Between 5 and 25 chars"
+              error={textInputValue4 !== '' && (textInputValue4.length > 25 || textInputValue4.length <= 4)}
+              success={textInputValue4.length > 4}
+              validText="Some error or success message."
+            />
+          </Card>
         </Card>
         <br /><br />
         <Modal />

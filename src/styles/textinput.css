@@ -1,0 +1,144 @@
+@import './themes.css';
+
+.text-input-container {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.text-input {
+    width: 100%;
+    padding: 10px;
+    margin: 2px;
+    box-sizing: border-box;
+    border: 2px solid var(--object-background-dark);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--background);
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.text-input-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-left: 6px;
+    width: 90%;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+.text-input-container.dark > .text-input-label {
+    color: var(--text-dark);
+}
+
+.text-input-inner-container {
+    position: relative;
+}
+
+.text-input-inner-container > i {
+    position: absolute;
+    margin-left: 2px;
+    top: 50%;
+    left: 12px;
+    font-size: 16px;
+    transform: translateY(-50%);
+    color: var(--text);
+}
+
+.text-input.with-icon {
+    padding-left: 34px;
+}
+
+.text-input:focus,
+.text-input.primary:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.text-input.success:focus {
+    border-color: var(--success);
+}
+
+.text-input.danger:focus {
+    border-color: var(--danger);
+}
+
+.text-input.secondary:focus {
+    border-color: var(--secondary);
+}
+
+.text-input.caution:focus {
+    border-color: var(--caution);
+}
+
+.text-input.info:focus {
+    border-color: var(--info);
+}
+
+.text-input.important:focus {
+    border-color: var(--important);
+}
+
+.text-input.success {
+    border-color: var(--success) !important;
+}
+
+.text-input.error {
+    border-color: var(--danger) !important;
+    color: var(--danger) !important;
+}
+
+.text-input::placeholder {
+    color: var(--text);
+    opacity: 0.5;
+}
+
+.text-input-container.dark .text-input::placeholder {
+    color: var(--text-dark);
+}
+
+.text-input.dark {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+    border-color: var(--object-background-dark);
+}
+
+.text-input.dark::placeholder {
+    color: var(--secondary-dark);
+}
+
+.text-input:disabled {
+    background-color: var(--object-background);
+    color: var(--secondary);
+    border-color: var(--secondary);
+    cursor: not-allowed;
+}
+
+.text-input.dark:disabled {
+    background-color: var(--object-background-dark);
+    color: var(--secondary-dark);
+    border-color: var(--secondary-dark);
+}
+
+.text-input-valid-text {
+    font-size: 12px;
+    margin-left: 6px;
+    margin-top: 0px;
+    font-weight: 500;
+    opacity: 0;
+    color: transparent;
+    transition: opacity 0.3s, color 0.3s;
+}
+
+.text-input-valid-text.success {
+    color: var(--success);
+    opacity: 1;
+}
+
+.text-input-valid-text.error {
+    color: var(--danger);
+    opacity: 1;
+}
+

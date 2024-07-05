@@ -1,0 +1,67 @@
+/* icon.css */
+@import './themes.css';
+
+.icon {
+    color: var(--text);
+}
+
+.icon.dark {
+    color: var(--text-dark);
+}
+
+.icon.primary {
+    color: var(--primary);
+}
+
+.icon.success {
+    color: var(--success);
+}
+
+.icon.danger {
+    color: var(--danger);
+}
+
+.icon.secondary {
+    color: var(--secondary);
+}
+
+.icon.caution {
+    color: var(--caution);
+}
+
+.icon.info {
+    color: var(--info);
+}
+
+.icon.important {
+    color: var(--important);
+}
+
+/* Dark context */
+.icon.dark.primary {
+    color: var(--primary-dark);
+}
+
+.icon.dark.success {
+    color: var(--success-dark);
+}
+
+.icon.dark.danger {
+    color: var(--danger-dark);
+}
+
+.icon.dark.secondary {
+    color: var(--secondary-dark);
+}
+
+.icon.dark.caution {
+    color: var(--caution-dark);
+}
+
+.icon.dark.info {
+    color: var(--info-dark);
+}
+
+.icon.dark.important {
+    color: var(--important-dark);
+}
