@@ -1,7 +1,8 @@
 {
   "name": "makue",
   "version": "0.1.0",
-  "private": true,
+  "description": "A sleek CSS framework for React applications.",
+  "main": "index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -11,6 +12,20 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mtwlz/makue.git"
+  },
+  "keywords": [
+    "react",
+    "css",
+    "framework",
+    "makue",
+    "ui",
+    "modern"
+  ],
+  "author": "mtwlz",
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

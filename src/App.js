@@ -130,7 +130,6 @@ function App() {
   const [textInputValue2, setTextInputValue2] = useState('');
   const [textInputValue3, setTextInputValue3] = useState('');
   const [textInputValue4, setTextInputValue4] = useState('');
-  const [textInputValue5, setTextInputValue5] = useState('');
 
   return (
     <div className={`app ${darkMode ? 'dark' : ''}`}>
