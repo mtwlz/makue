@@ -1,8 +1,9 @@
-// src/context/ModalContext.js
 import React, { createContext, useContext, useState } from 'react';
 
+// Create the ModalContext
 const ModalContext = createContext();
 
+// ModalProvider to wrap around components
 export const ModalProvider = ({ children }) => {
   const [modalProps, setModalProps] = useState({
     isOpen: false,
@@ -24,4 +25,8 @@ export const ModalProvider = ({ children }) => {
   );
 };
 
+// Custom hook to access the ModalContext
 export const useModalContext = () => useContext(ModalContext);
+
+// Export the ModalContext itself
+export { ModalContext };
