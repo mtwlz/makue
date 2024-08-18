@@ -19,7 +19,24 @@ A CSS framework for React projects.
 - Toggles
 
 ## Installation
+### Option 1: Add to package.json
+1. Add the package to your `package.json` file:
+  ```json
+    {
+      "dependencies": {
+        "@mtwlz/makue": "0.1.0"
+      }
+    }
+  ```
 
+2. In your project directory, run `npm install` in the console.
+
+### Option 2: Add via Terminal
+1. Run this command in the terminal:
+  ```bash
+    npm install @mtwlz/makue --registry=https://npm.pkg.github.com
+  ```
+### Option 3: Clone the GIT
 1. Clone the repository:
 
   ```bash
